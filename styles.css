@@ -1,0 +1,150 @@
+:root {
+  /* colors */
+  --dark-blue: hsl(218, 44%, 22%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --light-gray: hsl(212, 45%, 89%);
+  --white: hsl(0, 0%, 100%);
+
+  /* font */
+  --font: "Outfit", Arial, Helvetica, sans-serif;
+  --font-size: 15px;
+
+  /* spacing */
+  --gap: 18px;
+}
+
+/* General */
+html,
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100vw;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-gray);
+  font-family: var(--font);
+  font-size: var(--font-size);
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  border: 0;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Custom classes */
+/* Atoms */
+.rounded-image {
+  border-radius: 10px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Components */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.card {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px 0px rgba(123, 135, 157, 0.2);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  height: auto;
+  min-width: 315px;
+  padding: 15px 15px 45px;
+  width: 315px;
+}
+
+.card-image img {
+  height: 285px;
+  width: 285px;
+}
+
+.card-info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  padding: 0 10px;
+  text-align: center;
+}
+
+.card-title {
+  color: var(--dark-blue);
+  font-family: var(--font);
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.card-text {
+  color: var(--grayish-blue);
+}
+
+/* Molecules */
+.page {
+  align-items: center;
+  background-color: var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  height: 100vh;
+  justify-content: center;
+  padding: var(--gap);
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (max-width: 914px) and (orientation: landscape) {
+  .page {
+    height: auto;
+    padding-bottom: 28px;
+    padding-top: 28px;
+  }
+}
+
+@media screen and (max-width: 999px) and (orientation: portrait) {
+  .page {
+    height: 100vh;
+    padding-bottom: 28px;
+    padding-top: 28px;
+  }
+}
